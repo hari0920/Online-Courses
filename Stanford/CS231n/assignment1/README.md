@@ -4,3 +4,5 @@ Details about this assignment can be found [on the course webpage](http://cs231n
 My solutions to the Assignments.
 Assignment 1:
   KNN-Done
+  SVM-Done
+  Softmax-In Progress

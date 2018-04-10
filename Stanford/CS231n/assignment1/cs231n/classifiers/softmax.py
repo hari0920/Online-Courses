@@ -30,7 +30,16 @@ def softmax_loss_naive(W, X, y, reg):
   # here, it is easy to run into numeric instability. Don't forget the        #
   # regularization!                                                           #
   #############################################################################
-  pass
+  num_examples=X.shape[0];
+  for i in range(num_examples):
+    scores=X[i].dot(W)
+    #this gives a (1,C) vector of scores.
+    scores-=np.max(scores)
+    p=np.exp(y[i])/np.sum(np.exp(scores))
+    loss+=(-np.log(p))
+#now we have the loss over all the examples. dividing by number of training examples will give overall loss.
+  loss/=num_examples
+  #pass
   #############################################################################
   #                          END OF YOUR CODE                                 #
   #############################################################################
