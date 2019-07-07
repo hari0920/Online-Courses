@@ -1,0 +1,30 @@
+//Header file for Teacher Class
+#pragma once
+#include <string>
+
+class Teacher
+{
+  private:
+    std::string firstname, lastname;
+    int age;
+    std::string address;
+    std::string city;
+    std::string phonenumber;
+
+  public:
+    //Default Constructor
+    Teacher();
+    //valued constructor
+    Teacher(std::string firstname, std::string lastname, int age, std::string address, std::string phonenumber);
+    //Destructor
+    ~Teacher();
+    void GradeStudent();
+	void SitInClass();
+    //Accessors
+    std::string GetFirstname();
+    std::string GetLastname();
+    int GetAge();
+    std::string GetAddress();
+    std::string GetCity();
+    std::string GetPhoneNumber();
+};
